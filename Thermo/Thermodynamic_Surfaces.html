@@ -11997,8 +11997,10 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (3) $
 <span class="n">P</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">R</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">V_array</span>
 <span class="k">print</span> <span class="s2">&quot;There are&quot;</span><span class="p">,</span> <span class="n">P</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="s2">&quot;points in P&quot;</span>
 
-<span class="c1"># Graph P(V)</span>
+<span class="c1"># Open up a figure window</span>
 <span class="n">figure</span><span class="p">()</span>
+
+<span class="c1"># Graph P(V)</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">V_array</span><span class="p">,</span><span class="n">P</span><span class="p">)</span> <span class="c1"># Plot the ideal gas Boyle isotherm</span>
 <span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;V (L)&#39;</span><span class="p">)</span> <span class="c1"># Label the x axis</span>
 <span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;P (atm)&#39;</span><span class="p">)</span> <span class="c1"># Label the y axis</span>
@@ -12033,9 +12035,11 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (3) $
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Get pressure</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Get pressure of a vdw gas</span>
 
-<span class="c1"># Graph P(V)</span>
+<span class="c1"># Open up a figure window</span>
+
+<span class="c1"># Graph Pvdw(V)</span>
 </pre></div>
 
 </div>
@@ -12124,8 +12128,10 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (3) $
 <span class="k">print</span> <span class="s2">&quot;There are&quot;</span><span class="p">,</span> <span class="n">shape</span><span class="p">(</span><span class="n">P</span><span class="p">),</span> <span class="s2">&quot;points in P&quot;</span>
 <span class="k">print</span> <span class="n">P</span>
 
-<span class="c1"># Graph it</span>
+<span class="c1"># Open up a 3d figure window</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">figure</span><span class="p">()</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span> <span class="c1"># Set up a three dimensional graphics window </span>
+
+<span class="c1"># Graph the pressure</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">V_grid</span><span class="p">,</span> <span class="n">T_grid</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span> <span class="c1"># Make the mesh plot P(V,T)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;V (L)&#39;</span><span class="p">)</span> <span class="c1"># Label axes</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;T (K)&#39;</span><span class="p">)</span>
@@ -12163,7 +12169,9 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (3) $
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Get pressure grid of van der Waals gas (Pvdw) for every point on the grid</span>
 
-<span class="c1"># Graph it</span>
+<span class="c1"># Open up a 3d figure window</span>
+
+<span class="c1"># Graph the pressure</span>
 </pre></div>
 
 </div>
@@ -12176,7 +12184,7 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (3) $
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>You’ll notice that the thermodynamic surfaces for an ideal gas and a vdw gas are barely distinguishable from each other. For that reason, it's useful to look at the % difference between them. Display this difference as a thermodynamic surface as a separate figure (say, fignum=3).</p>
+<p>You’ll notice that the thermodynamic surfaces for an ideal gas and a vdw gas are barely distinguishable from each other. For that reason, it's useful to look at the % difference between them.</p>
 
 </div>
 </div>
@@ -12188,9 +12196,9 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (3) $
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Calculate the %error</span>
 
-<span class="c1"># Print the %error</span>
+<span class="c1"># Open up a 3d figure window</span>
 
-<span class="c1"># Graph the %error</span>
+<span class="c1"># Graph the error</span>
 </pre></div>
 
 </div>
