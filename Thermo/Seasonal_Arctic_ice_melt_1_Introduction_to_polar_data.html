@@ -11798,7 +11798,7 @@ div#notebook {
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p><em>Climate connection</em><br>
 Human activity has changed the composition of the atmosphere in such a way that the temperature of the planet has increased. Polar regions have undergone greater increases in temperature than midlatitudes, a phenomenon called <em>polar amplification</em>. Recent research has also shown that this amplified warming has a significant impact on weather at lower latitudes, causing severe episodes of drought and heavy rainfall in North America and Asia.</p>
 <p>Polar ampification is largely due to a phenomenon called <em>ice-albedo feedback</em>. Ice-albedo feedback works as follows: Ice and snow have a high <em>albedo</em>, meaning those surfaces efficiently reflect radiation away from the earth's surface. But the water that comes from <em>melted</em> snow and ice has a lower albedo, meaning it absorbs more solar radiation. That, in turn,  warms the surface a little more, which causes more melting, and so on: a postive feedback.</p>
-<p>All this means that sea ice extent in polar regions is an excellent indicator of climate changes resulting from human activity. To that end, climate scientists have taken careful measurements of the seasonal melting and freezing of ice in polar regions, as well as trends in that melting and freezing from year to year. Here, you will examine some of these datasets.</p>
+<p>All this means that sea ice extent in polar regions is a key climate driver. To that end, climate scientists have taken careful measurements of the seasonal melting and freezing of ice in polar regions, as well as trends in that melting and freezing from year to year. Here, you will examine some of this data.</p>
 
 </div>
 </div>
@@ -11808,26 +11808,13 @@ Human activity has changed the composition of the atmosphere in such a way that 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Sea ice volume and extent</em><br>
-Sea ice <em>volume</em> is the total volume of sea ice at any given time, usually for a given region; we have Arctic sea ice volume and Antarctic sea ice volume. At both poles, the sea ice volume varies a lot over a season. Some data are given in Figure 1. During the Arctic winter, because the sun is down 24 hours a day, ice volume steadily builds up. The maximum occurs in April, at which point the sun finally rises high enough in the sky that ice begins to melt. Melting continues until September, when cold once again sets in, and ice volume begins to increase.</p>
-<p style='text-align: center;'>
-<img src="http://psc.apl.uw.edu/wordpress/wp-content/uploads/schweiger/ice_volume/BPIOMASIceVolumeAnomalyCurrentV2.1_CY.png" height="300" width="400"/> 
-Figure 1. Seasonal variation of Arctic sea ice volume.
-</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Sea ice <em>extent</em> refers to the area covered by sea ice. Sea ice extent varies a lot over a season too, as shown in the figure below.</p>
+<p>Sea ice <em>extent</em> refers to the area covered by sea ice. Sea ice extent varies a lot over a season, as shown in the figure below.</p>
 <p style='text-align: center;'>
 <img src="https://ads.nipr.ac.jp/vishop/graph/Sea_Ice_Extent_N_prev_v2.png" height="400" width="400"/>  
 Figure 2. Arctic sea ice extent
-</p><p>One question for climate scientists concerns <em>how</em> Arctic ice melts seasonally. Is more volume lost at the edges, or through thinning of the entire ice cover? It turns out that if you know sea ice volume <em>and</em> extent, then you can also estimate the <em>thickness</em> of the ice. This follows from simple dimensional analysis: volume has dimension $distance^3$, while extent has dimension $distance^2$. So the ratio between them tells you about the thickness.</p>
-<p>In this CGI, you'll look at some Arctic sea ice data and try to come up with an answer to this question. In doing so, you'll develop familiarity with the seasonal and year-to-year patterns of sea ice growth and melt, as well as skill at visualizing and analyzing the available data.</p>
+</p><p>One question for climate scientists concerns <em>how</em> Arctic ice melts seasonally. An insight into this question regards the ice <em>thickness</em>: is it getting thicker, or thinner, over the "melt season", i.e., the time interval from maximum to minimum ice extent? Any ideas on this?</p>
+<p>One way to get at Arctic ice thickness is by taking measurements of Arctic ice <em>volume</em> in addition to Arctic ice <em>extent</em>. Then you could estimate the thickness of the ice. This follows from simple dimensional analysis: volume has units $m^3$, while extent has units $m^2$ (in SI units). So the ratio between them is a measure of Arctic ice thickness.</p>
+<p>In this CGI, you'll try to infer Arctic ice thickness from sea ice extent and volume data. In doing so, you'll develop familiarity with the seasonal and year-to-year patterns of sea ice growth and melt, skill at visualizing and analyzing the available data, and perhaps glean some insight into the seasonal pattern of Arctic sea ice.</p>
 
 </div>
 </div>
@@ -11837,45 +11824,7 @@ Figure 2. Arctic sea ice extent
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Part-I.-Viewing-the-seasonal-cycle-of-polar-sea-ice">Part I. Viewing the seasonal cycle of polar sea ice<a class="anchor-link" href="#Part-I.-Viewing-the-seasonal-cycle-of-polar-sea-ice">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here you will use the Sea Ice Animation Tool provided by the National Snow and Ice Data Center (NSIDC) to watch the seasonal cycles of polar sea ice. These images are created using a satellite microwave sensor.</p>
-<p>1) Go to the website <a href="https://nsidc.org/data/">https://nsidc.org/data/</a>.<br>
-2) The third column says, "Data For Everyone." In that column, choose "Sea Ice Index."<br>
-3) You will see a map of the Arctic. Under "Arctic" at the top, click on "Animate Monthly Images."<br>
-4) Select 2016 as the start year and play the movie to see the sea ice extent change over the course of a year. 
-5) Repeat the above for the Antarctic by selecting "Southern" for Hemisphere. In what month is the sea ice at a maximum? a minimum? How does this compare to the Arctic and why does it differ?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pause-for-analysis">Pause for analysis<a class="anchor-link" href="#Pause-for-analysis">&#182;</a></h3><ol>
-<li>Looking back on Figures 1 and 2, do you notice any year-to-year trends in the maximum or minimum of Arctic sea ice volume or extent?</li>
-<li>Based on what you've seen so far (which admittedly isn't very much), would you guess that Arctic ice melts more by retreat of its edges, or by thinning?  </li>
-<li>Watch the animation again for the Northern Hemisphere for 2016 with sea ice concentration selected this time. Sea ice concentration shows the percent of the ocean covered by sea ice at that location. What insight does this provide?</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Part-II.-Retrieving-and-plotting-Arctic-sea--ice-data">Part II. Retrieving and plotting Arctic sea  ice data<a class="anchor-link" href="#Part-II.-Retrieving-and-plotting-Arctic-sea--ice-data">&#182;</a></h3>
+<h3 id="Part-I.-Viewing-and-retrieving-polar-sea-ice-data">Part I. Viewing and retrieving polar sea ice data<a class="anchor-link" href="#Part-I.-Viewing-and-retrieving-polar-sea-ice-data">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11901,7 +11850,28 @@ Figure 2. Arctic sea ice extent
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the following cell, we use the np.arange command to create an array of months, from 1 (January) to 12 (December). We then print the list.</p>
+<p>Here you will use the Sea Ice Animation Tool provided by the National Snow and Ice Data Center (NSIDC) to watch the seasonal cycles of polar sea ice. These images are created using a satellite microwave sensor. Go to the website <a href="https://nsidc.org/data/">https://nsidc.org/data/</a>. The third column says, <em>Data For Everyone</em>. In that column, choose <em>Sea Ice Index</em>. You will see a map of the Arctic. Under <em>Arctic</em> at the top, click on <em>Animate Monthly Images</em>.  You should now be in a page titled <em>Sea Ice Index Animation Tool</em>.</p>
+<p>1) Select January 2002 as the start year and press the &gt; button to march through images of sea ice extent over the course of a few years. In what month is Arctic sea ice at a maximum? a minimum?<br>
+2) Still in the <em>Sea Ice Index Animation Tool</em>, select 1995 again, but now specify the start month as the month of minimum extent that you identified in the previous step. Then click on <em>fixed month animations</em>, and run the animation again.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pause-for-analysis:-Do-you-detect-any-trends-in-the-minmum-sea-ice-extent-over-the-time-period-1995-to-present?-Which-year-seems-to-have-had-the-least-minimum-sea-ice-extent?-Are-these-results-qualitatively-consistent-with-the-data-presented-in-Figure-1?">Pause for analysis: Do you detect any trends in the minmum sea ice extent over the time period 1995 to present? Which year seems to have had the least minimum sea ice extent? Are these results qualitatively consistent with the data presented in Figure 1?<a class="anchor-link" href="#Pause-for-analysis:-Do-you-detect-any-trends-in-the-minmum-sea-ice-extent-over-the-time-period-1995-to-present?-Which-year-seems-to-have-had-the-least-minimum-sea-ice-extent?-Are-these-results-qualitatively-consistent-with-the-data-presented-in-Figure-1?">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next you'll use the NSIDC site to verify some data. Fortunately, let's suppose your partner has obtained these monthly average sea ice extent data for a particular year. They kindly entered that data in the cell below, and added an array of months, from 1 (January) to 12 (December), using the <em>arange</em> function (which comes from numpy, by the way).</p>
 
 </div>
 </div>
@@ -11911,7 +11881,11 @@ Figure 2. Arctic sea ice extent
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">months</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">months</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define sea ice extent values for a particular year</span>
+<span class="n">months</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">sea_ice_extent</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mf">12.17</span><span class="p">,</span><span class="mf">12.675</span><span class="p">,</span><span class="mf">13.372</span><span class="p">,</span><span class="mf">12.824</span><span class="p">,</span><span class="mf">11.007</span><span class="p">,</span><span class="mf">8.069</span><span class="p">,</span><span class="mf">5.021</span><span class="p">,</span><span class="mf">2.819</span><span class="p">,</span><span class="mf">2.372</span><span class="p">,</span><span class="mf">4.53</span><span class="p">,</span><span class="mf">8.004</span><span class="p">,</span><span class="mf">10.396</span><span class="p">])</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">months</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">sea_ice_extent</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11924,20 +11898,27 @@ Figure 2. Arctic sea ice extent
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Ice Extent</em><br>
-We will download some Arctic sea ice extent data from the NSIDC site. The first two steps below are the same as previous, while following steps differ:</p>
-<p>1) Go to the website <a href="https://nsidc.org/data/">https://nsidc.org/data/</a>.<br>
-2) The third column says, "Data For Everyone." In that column, choose "Sea Ice Index."<br>
-3) You will see a map of the Arctic. Under "Arctic" at the top, this time click on "Data Archive" to the far right.<br>
-4) Click on the dark blue tab that says "Data" in about the middle of the page.<br>
-5) Under "Monthly Sea Ice Extent and Area Data Files" click on "FTP directory."<br>
-6) If you have a Mac, next click "Allow."
-7) A window pops up.  Click "Guest" a "Connect."
-8) Your finder should open.  Double-click "seaice_analysis."
-9) Double click "Sea_Ice_Index_Monthly_Data_by_Year_G02135_v2.1.xlsx" (you will need Excel).
-10) A spreadsheet opens.  There are tabs for different "sheets" at the bottom. If you click "Documentation," you can read a little bit about the data. Note the units and write them in your notebook. 
-11) Next click on the "NH-extent" tab at the bottom. The leftmost column is year, the top row is month, and the other values are sea ice extent in the units you noted. We are interested in the values from 2016, which are cut and pasted below.</p>
+<p>Unfortunately, your partner did not record the units of these data. Are they in square miles? square kilometers? For that matter, they didn't record the year these data correspond to either. Bad partner.</p>
+<p>So ... you need to do a little sleuthing. Go back to <a href="https://nsidc.org/data/seaice_index/">https://nsidc.org/data/seaice_index/</a>, click on <em>Data Archive</em> on the far right, then on the dark blue tab that says <em>Data</em>. Then go to the FTP directory under <em>Monthly Sea Ice Extent and Area Data Files</em>. Eventually you should be able to navigate to "seaice_analysis" (which might require logging in as "Guest"), and from there, to "Sea_Ice_Index_Monthly_Data_by_Year_G02135_v2.1.xlsx". A spreadsheet should open.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pause-for-analysis:-If-you-check-out-the-&quot;NH-extent&quot;-tab-at-the-bottom-of-the-spreadsheet,-you-should-be-able-to-identify-the-units-of-the-sea-ice-extent-data.-In-the-&quot;NH-area&quot;-tab,-you-should-be-able-to-identify-the-year-the-above-monthly-data-correspond-to.-Record-the-units-and-the-year-in-your-notebook.">Pause for analysis: If you check out the "NH-extent" tab at the bottom of the spreadsheet, you should be able to identify the units of the sea ice extent data. In the "NH-area" tab, you should be able to identify the year the above monthly data correspond to. Record the units and the year in your notebook.<a class="anchor-link" href="#Pause-for-analysis:-If-you-check-out-the-&quot;NH-extent&quot;-tab-at-the-bottom-of-the-spreadsheet,-you-should-be-able-to-identify-the-units-of-the-sea-ice-extent-data.-In-the-&quot;NH-area&quot;-tab,-you-should-be-able-to-identify-the-year-the-above-monthly-data-correspond-to.-Record-the-units-and-the-year-in-your-notebook.">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Part-II.-Plotting-Arctic-sea--ice-data">Part II. Plotting Arctic sea  ice data<a class="anchor-link" href="#Part-II.-Plotting-Arctic-sea--ice-data">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -11956,18 +11937,15 @@ We will download some Arctic sea ice extent data from the NSIDC site. The first 
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Open up a plotting window</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Open up a plotting window with gridlines</span>
 <span class="n">figure</span><span class="p">()</span>
+<span class="n">grid</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="p">)</span>
 
-<span class="c1"># Define sea ice extent values for a particular year</span>
-<span class="n">sea_ice_extent</span> <span class="o">=</span> <span class="p">[</span><span class="mf">13.638</span><span class="p">,</span><span class="mf">14.323</span><span class="p">,</span><span class="mf">14.533</span><span class="p">,</span><span class="mf">13.829</span><span class="p">,</span><span class="mf">12.082</span><span class="p">,</span><span class="mf">10.604</span><span class="p">,</span><span class="mf">8.131</span><span class="p">,</span><span class="mf">5.598</span><span class="p">,</span><span class="mf">4.719</span><span class="p">,</span>\
-                <span class="mf">6.45</span><span class="p">,</span><span class="mf">9.078</span><span class="p">,</span><span class="mf">12.092</span><span class="p">]</span>
-
-<span class="c1"># Plot</span>
+<span class="c1"># Plot the sea ice extent ... but modify the y-label so it includes the correct units</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">months</span><span class="p">,</span><span class="n">sea_ice_extent</span><span class="p">,</span><span class="s1">&#39;.-&#39;</span><span class="p">)</span>
 <span class="n">title</span><span class="p">(</span><span class="s1">&#39;Northern Hemisphere Sea Ice Extent: 2016&#39;</span><span class="p">)</span>
 <span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Month&#39;</span><span class="p">)</span>
-<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Extent (10$^6$ km)&#39;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Extent (units ...)&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11980,15 +11958,7 @@ We will download some Arctic sea ice extent data from the NSIDC site. The first 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>Ice Volume</em><br>
-For ice volume, we will use a reanalysis dataset, which is a model prediction based on observations. We will download ice volume from the Polar Science Center of the University of Washington.</p>
-<p>1) Go to <a href="http://psc.apl.uw.edu/research/projects/arctic-sea-ice-volume-anomaly/data/">http://psc.apl.uw.edu/research/projects/arctic-sea-ice-volume-anomaly/data/</a><br>
-2) Scroll down to "PIOMAS Monthly Ice Volume Data, 1979-present."<br>
-3) You <em>must</em> fill out an email address (even though it says "Optional." Any email address with an @ sign will work (e.g. guest@guest).<br>
-4) Then click "PIOMAS Monthly Ice Volume Data," which may appear to the right of "Send," or under "Your message was sent successfully."<br>
-5) A new window opens with data.<br>
-6) The left-most column gives year and then next 12 columns are for months, from January to December. This data has been pasted below.
-6) (Optional) Click File -&gt; Save as and save the file to your directory, as indicated by your instructor.</p>
+<p>Your partner also got some sea ice volume from NSIDC for the same month, this time with units.</p>
 
 </div>
 </div>
@@ -11998,14 +11968,36 @@ For ice volume, we will use a reanalysis dataset, which is a model prediction ba
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Open up a plotting window</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define sea ice volume values for a particular year. The data are in units 1000 km^3</span>
+<span class="n">sea_ice_volume</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mf">17.185</span><span class="p">,</span><span class="mf">19.592</span><span class="p">,</span><span class="mf">21.524</span><span class="p">,</span><span class="mf">22.459</span><span class="p">,</span><span class="mf">21.026</span><span class="p">,</span><span class="mf">16.493</span><span class="p">,</span><span class="mf">10.257</span><span class="p">,</span><span class="mf">5.941</span><span class="p">,</span><span class="mf">4.530</span><span class="p">,</span><span class="mf">5.511</span><span class="p">,</span><span class="mf">7.834</span><span class="p">,</span><span class="mf">11.206</span><span class="p">])</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">sea_ice_volume</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Plot the Sea Ice volume, with the units labeled</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Open up a plotting window with gridlines</span>
 <span class="n">figure</span><span class="p">()</span>
+<span class="n">grid</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="p">)</span>
 
-<span class="c1"># Define sea ice volume values for a particular year</span>
-<span class="n">sea_ice_volume</span> <span class="o">=</span> <span class="p">[</span><span class="mf">17.185</span><span class="p">,</span> <span class="mf">19.592</span><span class="p">,</span> <span class="mf">21.524</span><span class="p">,</span> <span class="mf">22.459</span><span class="p">,</span> <span class="mf">21.026</span><span class="p">,</span> <span class="mf">16.493</span><span class="p">,</span> <span class="mf">10.257</span><span class="p">,</span>  \
-                  <span class="mf">5.941</span><span class="p">,</span>  <span class="mf">4.530</span><span class="p">,</span>  <span class="mf">5.511</span><span class="p">,</span>  <span class="mf">7.834</span><span class="p">,</span> <span class="mf">11.206</span><span class="p">]</span>
-
-<span class="c1"># Plot</span>
+<span class="c1"># Plot the sea ice volume ... with correct units </span>
 </pre></div>
 
 </div>
@@ -12018,7 +12010,16 @@ For ice volume, we will use a reanalysis dataset, which is a model prediction ba
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Plot the Sea Ice volume with the correct units.</p>
+<h3 id="Part-III.-Analyzing-Arctic-sea--ice-thickness">Part III. Analyzing Arctic sea  ice thickness<a class="anchor-link" href="#Part-III.-Analyzing-Arctic-sea--ice-thickness">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From dimensional analysis, you can estimate the thickness of Arctic sea ice, but first it's best to convert the sea ice extent to m^2, and the volume to km^3. Do these conversions and calculate the thickness.</p>
 
 </div>
 </div>
@@ -12028,7 +12029,18 @@ For ice volume, we will use a reanalysis dataset, which is a model prediction ba
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get the extent in km^2</span>
+<span class="n">sea_ice_extent_km2</span> <span class="o">=</span> <span class="n">sea_ice_extent</span><span class="o">*</span><span class="mf">1e6</span>
+
+<span class="c1"># Get the volume in km^3</span>
+<span class="n">sea_ice_volume_km3</span> <span class="o">=</span> <span class="n">sea_ice_volume</span><span class="o">*</span><span class="mf">1e3</span>
+
+<span class="c1"># Calculate the thickness in km</span>
+<span class="n">sea_ice_thickness_km</span> <span class="o">=</span> <span class="n">sea_ice_volume_km3</span><span class="o">/</span><span class="n">sea_ice_extent_km2</span>
+
+<span class="c1"># Convert the thickness to m</span>
+<span class="n">sea_ice_thickness_m</span> <span class="o">=</span> <span class="n">sea_ice_thickness_km</span><span class="o">*</span><span class="mf">1e3</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Ice thickness&#39;</span><span class="p">,</span> <span class="n">sea_ice_thickness_m</span><span class="p">,</span> <span class="s1">&#39;meters&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12041,16 +12053,7 @@ For ice volume, we will use a reanalysis dataset, which is a model prediction ba
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Part-III.-Analyzing-Arctic-sea--ice-data">Part III. Analyzing Arctic sea  ice data<a class="anchor-link" href="#Part-III.-Analyzing-Arctic-sea--ice-data">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here we will estimate seasonal changes in volume and extent. We will make use of the np.min and np.max commands to find the minimum and maximum in the sea ice extent and volume shown in the figures above.</p>
+<p>It will probably help to plot these thickness -- do so, with labels and units.</p>
 
 </div>
 </div>
@@ -12060,13 +12063,12 @@ For ice volume, we will use a reanalysis dataset, which is a model prediction ba
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get the changes in volume, in km^3</span>
-<span class="n">Ice_volume_change</span> <span class="o">=</span> <span class="mf">23e3</span><span class="o">-</span><span class="mf">4e3</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Ice_volume_change&#39;</span><span class="p">,</span> <span class="n">Ice_volume_change</span><span class="p">,</span> <span class="s1">&#39;km^3&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Open up a plotting window with gridlines</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">grid</span><span class="p">(</span><span class="s1">&#39;on&#39;</span><span class="p">)</span>
 
-<span class="c1"># Calculate the changes in extent, in km^2</span>
-<span class="n">Ice_extent_change</span> <span class="o">=</span> <span class="mf">14e6</span><span class="o">-</span><span class="mf">3.5e6</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Ice_extent_change&#39;</span><span class="p">,</span> <span class="n">Ice_extent_change</span><span class="p">,</span> <span class="s1">&#39;km^2&#39;</span><span class="p">)</span>
+<span class="c1"># Plot the thickness as a function of month</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">months</span><span class="p">,</span><span class="n">sea_ice_thickness_m</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12079,65 +12081,7 @@ For ice volume, we will use a reanalysis dataset, which is a model prediction ba
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Get the change in volume and extent as percentages</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;As a percent, volume reduction = &#39;</span><span class="p">,</span> <span class="n">Ice_volume_change</span><span class="o">/</span><span class="mf">23e3</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;As a percent, extent reduction = &#39;</span><span class="p">,</span> <span class="n">Ice_extent_change</span><span class="o">/</span><span class="mf">14e6</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Estimate thickness (m) from the volume and extent, for both April and September</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># April</span>
-<span class="n">Volume</span> <span class="o">=</span> <span class="mf">23e3</span> <span class="c1"># km^3</span>
-<span class="n">Extent</span> <span class="o">=</span> <span class="mf">14e6</span> <span class="c1"># km^2</span>
-<span class="n">Thickness</span> <span class="o">=</span> <span class="n">Volume</span><span class="o">/</span><span class="n">Extent</span><span class="o">*</span><span class="mi">1000</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Thickness in April (m) =&#39;</span><span class="p">,</span> <span class="n">Thickness</span><span class="p">)</span>
-
-<span class="c1"># September</span>
-<span class="n">Volume</span> <span class="o">=</span> <span class="mf">4e3</span> <span class="c1"># km^3</span>
-<span class="n">Extent</span> <span class="o">=</span> <span class="mf">3.5e6</span> <span class="c1"># km^2</span>
-<span class="n">Thickness</span> <span class="o">=</span> <span class="n">Volume</span><span class="o">/</span><span class="n">Extent</span><span class="o">*</span><span class="mi">1000</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Thickness in September (m) =&#39;</span><span class="p">,</span> <span class="n">Thickness</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Pause-for-Analysis">Pause for Analysis<a class="anchor-link" href="#Pause-for-Analysis">&#182;</a></h3><p>In the first Pause for Analysis, you made a guess about the mechanism behind seasonal Arctic ice melt. Evaluate your claim. It may be helpful in doing so to calculate the seasonal reduction in thickness as a <em>percent</em>, and compare it to the seasonal reduction in volume previously calculated, also as a percent.</p>
-
+<h3 id="Pause-for-Analysis:-On-average,-how-thick-is-Arctic-ice?-Over-the-&quot;melt&quot;-season-(months-between-maximum-and-minimum-sea-ice-extent),-does-it-get-thicker-or-thinner?-Is-this-seasonal-trend-what-you-expected-to-find?">Pause for Analysis: On average, how thick is Arctic ice? Over the "melt" season (months between maximum and minimum sea ice extent), does it get thicker or thinner? Is this seasonal trend what you expected to find?<a class="anchor-link" href="#Pause-for-Analysis:-On-average,-how-thick-is-Arctic-ice?-Over-the-&quot;melt&quot;-season-(months-between-maximum-and-minimum-sea-ice-extent),-does-it-get-thicker-or-thinner?-Is-this-seasonal-trend-what-you-expected-to-find?">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12146,7 +12090,7 @@ For ice volume, we will use a reanalysis dataset, which is a model prediction ba
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Post-activity-reflection">Post-activity reflection<a class="anchor-link" href="#Post-activity-reflection">&#182;</a></h3><p>Record your Pause for Analysis reflections in your notebook, with appropriate graphs and equations.</p>
+<h3 id="Post-activity-reflection">Post-activity reflection<a class="anchor-link" href="#Post-activity-reflection">&#182;</a></h3><p>Record your Pause for Analysis reflections in your notebook, with appropriate graphs and equations. If you can devise an hypothesis for the thickening or thinning of Arctic ice over the melt season, provide one. If not, pose a research question whose answer might help.</p>
 
 </div>
 </div>
