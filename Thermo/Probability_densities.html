@@ -11788,11 +11788,10 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Pre-class-activities:">Pre-class activities:<a class="anchor-link" href="#Pre-class-activities:">&#182;</a></h2><p>Read the Introduction below.</p>
-<p>Prepare a single piece of paper with the following information, to turn in as a "prelab":<br>
-• Equations 1, 2, 4, and 5 from the Introduction.<br>
-• Values of the gas constant (<em>R</em>) and molar mass (<em>M</em>) of a gas molecules of your choice in the SI unit system.<br>
+<p>Prepare a page of your lab notebook with the following information; a picture of this page should be sent to me before the beginning of class.<br>
+• Equations 1-6 from the Introduction.<br>
+• Values of the gas constant (<em>R</em>) and molar mass (<em>M</em>) of a gas molecule of your choice in the SI unit system.<br>
 • A description of the trapezoidal rule in your own words. A pictoral representation might be useful.</p>
-<p>Prepare your lab notebook (the physical notebook) with a table of contents and a starting page for this activity. Duplicate the above prelab information there. Don't forget to bring this notebook with you during the in-class activity.</p>
 
 </div>
 </div>
@@ -11802,11 +11801,11 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>A probability density function describes the relative likelihood of a continuous random variable having a given value.  For example, gas molecules move over a continuous range of velocities and we can use the Boltzmann density function, $f_B$, to describe the x, y, or z-component of the velocity ($v_x$, $v_y$, or $v_z$).  In addition to a velocity component, this function also depends on the temperature (<em>T</em>) and the molar mass of the molecule (<em>M</em>); we say it is <em>parameterized</em> by these quantitites.  Similarly, the Maxwell density function, $f_M$, is a function of the speed (<em>v</em>), and is also parameterized by <em>T</em> and <em>M</em>.  Analytically, we write the Boltzmann density function as,</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>A probability density function describes the relative likelihood of a continuous random variable having a given value.  For example, gas molecules move over a continuous range of velocities and we can use the Boltzmann density function, $f_B$, to describe the x, y, or z-component of the velocity ($v_x$, $v_y$, or $v_z$).  In addition to a velocity component, this function also depends on the temperature (<em>T</em>) and the molar mass of the molecule (<em>M</em>); we say it is <em>parameterized</em> by these quantitites.  Similarly, the Maxwell density function, $f_M$, is a function of the speed (<em>v</em>), and is also parameterized by <em>T</em> and <em>M</em>.  Analytically, we write the Boltzmann density function as</p>
 <p style='text-align: right;'>
 $ f_B(v_x) = N_Be^{-{\scriptsize(\dfrac{M}{2RT}}){\Large v_x^2}} $
 $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (1) $
-</p><p>where we have written it as a function of the x-direction velocity component, $v_x$ (though the y- and z-forms look very similar).  The quantity $N_B$ is a normalization constant,</p>
+</p><p>where we have written it as a function of the x-direction velocity component, $v_x$ (the y- and z-forms look very similar).  The quantity $N_B$ is a normalization constant,</p>
 <p style='text-align: right;'>
 $ N_B = {\small{(\dfrac{M}{2 \pi RT}})}^{1/2} $
 $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (2) $
@@ -11864,7 +11863,7 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (7) $</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Another quantitative use of probability densities is to calculate averages, or <em>moments</em>, which in thermodynamics are denoted using the notation $\langle ...\rangle$.  For example, the <em>first moment</em> of the x-direction velocity component is calculated using the Boltzmann density function</p>
-<p style='text-align: left;'>
+<p style='text-align: right;'>
 $ \langle v_x \rangle = \int\limits_{-\infty}^{\infty} v_xf_B(v_x)dv_x  $
 $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (8) $
 </p><p>As can be seen from Eq. 8, we calculate the first moment of the x-direction velocity component by integrating the product of the x-direction velocity component ($v_x$) and the Boltzmann density function ($f_B$) from -$\infty$ to +$\infty$.  Higher-order moments are calculated similarly, e.,g., the <em>second moment</em> is found by integrating the product of the square of the x-component of the velocity ($v_x^2$) and the Boltzmann density function from -$\infty$ to +$\infty$</p>
@@ -12075,7 +12074,7 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (11) $
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Pause-for-Analysis:-You-should-analyze-$f_M(v)\space$-similarly-to-how-you-analyzed-$f_B(v_x)\space$,-i.e.,-make-a-a-sketch-of-$f_M(v)\space$-at-low-temperature-and-another-at-high-temperature,-in-your-computational-lab-notebook.--Once-again,-make-sure-that-your-plots-are-clearly-labeled-and-qualitatively-correct.">Pause for Analysis: You should analyze $f_M(v)\space$ similarly to how you analyzed $f_B(v_x)\space$, i.e., make a a sketch of $f_M(v)\space$ at low temperature and another at high temperature, in your computational lab notebook.  Once again, make sure that your plots are clearly labeled and qualitatively correct.<a class="anchor-link" href="#Pause-for-Analysis:-You-should-analyze-$f_M(v)\space$-similarly-to-how-you-analyzed-$f_B(v_x)\space$,-i.e.,-make-a-a-sketch-of-$f_M(v)\space$-at-low-temperature-and-another-at-high-temperature,-in-your-computational-lab-notebook.--Once-again,-make-sure-that-your-plots-are-clearly-labeled-and-qualitatively-correct.">&#182;</a></h4>
+<h4 id="Pause-for-Analysis:-Analyze-$f_M(v)\space$-similarly-to-how-you-analyzed-$f_B(v_x)\space$,-i.e.,-make-a-a-sketch-of-$f_M(v)\space$-at-low-temperature-and-another-at-high-temperature,-in-your-computational-lab-notebook.--Once-again,-make-sure-that-your-plots-are-clearly-labeled-and-correct.">Pause for Analysis: Analyze $f_M(v)\space$ similarly to how you analyzed $f_B(v_x)\space$, i.e., make a a sketch of $f_M(v)\space$ at low temperature and another at high temperature, in your computational lab notebook.  Once again, make sure that your plots are clearly labeled and correct.<a class="anchor-link" href="#Pause-for-Analysis:-Analyze-$f_M(v)\space$-similarly-to-how-you-analyzed-$f_B(v_x)\space$,-i.e.,-make-a-a-sketch-of-$f_M(v)\space$-at-low-temperature-and-another-at-high-temperature,-in-your-computational-lab-notebook.--Once-again,-make-sure-that-your-plots-are-clearly-labeled-and-correct.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12191,9 +12190,8 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad  (11) $
 <h2 id="Post-class-activities:">Post-class activities:<a class="anchor-link" href="#Post-class-activities:">&#182;</a></h2><p>In your CGI notebook, enter the following:</p>
 <ol>
 <li>Your responses to the "pause for analysis" items.</li>
-<li>You'll notice that everywhere the temperature, $T$, occurs in the above formulas, it is divided by the molar mass, $M$. That's interesting, isn't it? it means you ought to be able to predict the effects of a higher or lower mass based on what you've observed about a higher or lower temperature. So try this: make a <em>prediction</em> about how $f_B(v_x)$ would change (qualitatively) for, say, $H_2$. With a sketch, that is. Then re-graph $f_B(v_x)$ using this molar mass to see how your prediction fared.</li>
+<li>You'll notice that everywhere the temperature, $T$, occurs in the above formulas, it is divided by the molar mass, $M$. That's interesting, isn't it? it means you ought to be able to predict the effects of a higher or lower mass based on what you've observed about a higher or lower temperature. So try this: make a <em>prediction</em> about how $f_B(v_x)$ would change (qualitatively) for, say, $H_2$. With a sketch, that is. Then use python to re-graph $f_B(v_x)$ using this molar mass to see how your prediction fared.</li>
 <li>Explain what normalization constants in probability density functions are for.</li>
-<li>With a sketch, show what the trapezoidal rule does.</li>
 <li>Describe the difference between <em>numerical</em> and <em>analytical</em> methods for evaluating integrals, with examples from probablity distributions.</li>
 </ol>
 <p>I'll also be looking at your python notebook (the .ipynb file) on the CGI server. I will be looking for evidence of your mastery of the computational methods embedded in the exercise: whether the notebook is complete and your results accurate.</p>
